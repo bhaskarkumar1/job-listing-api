@@ -19,7 +19,7 @@ const register = async (req, res) => {
 
       const newDoc = new User({
         name: req.body.name,
-        email: req.body.name,
+        email: req.body.email,
         password: hashedpwd,
       });
       await newDoc.save();
