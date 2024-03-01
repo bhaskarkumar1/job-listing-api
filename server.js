@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 
 
-const port=7000
+const port=process.env.PORT ||7000
 app.use(express.json())
 
 const authRoute=require("./routes/authRoute")
