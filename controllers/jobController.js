@@ -97,6 +97,7 @@ const updateJobDetails = async (req, res) => {
       location,
       durationType,
       locationType,
+      skills
     } = req.body;
 
     if (
@@ -107,7 +108,8 @@ const updateJobDetails = async (req, res) => {
       !salary ||
       !location ||
       !durationType ||
-      !locationType
+      !locationType ||
+      !skills
     ) {
       return res.json({ message: "please pass all the necessary values" });
     }
@@ -123,6 +125,7 @@ const updateJobDetails = async (req, res) => {
         location,
         durationType,
         locationType,
+        skills
       }
     );
     res.send("OK update by job Id");
